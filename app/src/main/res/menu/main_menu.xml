@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ButtonClick"
+        android:orderInCategory="1"
+        android:title="ButtonClick" />
+    <item
+        android:id="@+id/MotionEvent"
+        android:orderInCategory="3"
+        android:title="MotionEvent" />
+    <item
+        android:id="@+id/CommonGestures"
+        android:orderInCategory="2"
+        android:title="CommonGestures." />
+</menu>

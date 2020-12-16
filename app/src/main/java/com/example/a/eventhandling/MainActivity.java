@@ -3,10 +3,11 @@ package com.example.a.eventhandling;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MotionEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
     private Button buttonClick;
@@ -32,10 +33,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item ) {
+        int id = item.getItemId();
+        TextView headetView = (TextView) findViewById(R.id.textView);
+        switch (id)
+        {
+            case R.id.MotionEvent:
+                Intent intent1 = new Intent(MainActivity.this, MotionEvent.class);
+                startActivity(intent1);
+
+            case R.id.CommonGestures:
+                Intent intent2 = new Intent(MainActivity.this, CommonGestures.class);
+                startActivity(intent2);
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
